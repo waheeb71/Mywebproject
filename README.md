@@ -69,14 +69,16 @@
 - **posted_date**: تاريخ ووقت النشر.
 
 ---
-
-## 2. العلاقات بين الجداول (ER Diagram مبسط)
-
 <p align="center">
   <img src="screenshots/p.png" alt="شاشة تنظيم الملفات">
   <br>
   <em>تنظيم الملفات</em>
 </p>
+---
+
+
+## 2. العلاقات بين الجداول (ER Diagram مبسط)
+
 
 <p align="center">
   <img src="screenshots/d.png" alt="شاشة الجداول والعلاقات">
