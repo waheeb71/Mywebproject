@@ -72,7 +72,7 @@
 <p align="center">
   <img src="screenshots/p.png" alt="شاشة تنظيم الملفات">
   <br>
-  <em>تنظيم الملفات</em>
+  <em> في المشروع تنظيم الملفات</em>
 </p>
 ---
 
