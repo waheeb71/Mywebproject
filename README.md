@@ -10,14 +10,14 @@
 يضم جميع المستخدمين سواء كانوا طلاباً أو مدرسين أو إداريين.
 - **user_id**: معرف المستخدم (Primary Key).
 - **full_name**: اسم المستخدم بالكامل.
-- **email**: البريد الإلكتروني (يفضل أن يكون فريدًا).
-- **password**: كلمة المرور (يُخزن بشكل مشفر).
+- **email**: البريد الإلكتروني 
+- **password**: كلمة المرور .
 - **role**: دور المستخدم (مثل: `student`، `instructor`، `admin`).
 - **created_at**: تاريخ ووقت إنشاء الحساب.
 - **updated_at**: تاريخ وآخر تحديث.
 
 ### 1.2 جدول الفئات (Categories)
-يستخدم لتصنيف الدورات والمقالات (يمكن تقسيمه إلى جدولين منفصلين حسب الحاجة).
+
 - **category_id**: معرف الفئة (Primary Key).
 - **name**: اسم الفئة.
 - **description**: وصف مختصر للفئة.
@@ -27,23 +27,23 @@
 - **course_id**: معرف الدورة (Primary Key).
 - **title**: عنوان الدورة.
 - **description**: وصف الدورة.
-- **instructor_id**: معرف المدرس (Foreign Key يشير إلى `Users.user_id` حيث role = `instructor`).
-- **category_id**: معرف الفئة (Foreign Key يشير إلى `Categories.category_id` لفئات الدورات).
+- **instructor_id**: معرف المدرس 
+- **category_id**: معرف الفئة
 - **created_at** و **updated_at**: توقيتات الإنشاء والتحديث.
 
 ### 1.4 جدول التسجيل في الدورات (Enrollments)
 يمثل العلاقة بين الطلاب والدورات (علاقة many-to-many بين المستخدمين (طلاب) والدورات).
 - **enrollment_id**: معرف التسجيل (Primary Key).
-- **student_id**: معرف الطالب (Foreign Key يشير إلى `Users.user_id` حيث role = `student`).
-- **course_id**: معرف الدورة (Foreign Key يشير إلى `Courses.course_id`).
-- **enrollment_date**: تاريخ التسجيل.
+- **student_id**: معرف الطالب 
+- **course_id**: معرف الدورة 
+- **enrollment_date**: 
 - **progress**: نسبة التقدم (مثلاً: من 0% إلى 100%).
 - **status**: حالة التسجيل (نشط، منتهي، ملغي...).
 
 ### 1.5 جدول الدروس (Lessons)
-يحتوي على محتوى الدروس أو الوحدات التعليمية داخل كل دورة.
+
 - **lesson_id**: معرف الدرس (Primary Key).
-- **course_id**: معرف الدورة (Foreign Key يشير إلى `Courses.course_id`).
+- **course_id**: معرف الدورة 
 - **title**: عنوان الدرس.
 - **content**: محتوى الدرس (قد يكون نصاً، فيديو، إلخ).
 - **order_number**: رقم الترتيب ضمن الدورة.
@@ -51,12 +51,12 @@
 - **created_at** و **updated_at**: توقيتات الإنشاء والتحديث.
 
 ### 1.6 جدول المقالات (Articles)
-يشمل الأخبار والمقالات المتعلقة بالأمن السيبراني والبرمجة.
+
 - **article_id**: معرف المقال (Primary Key).
 - **title**: عنوان المقال.
 - **content**: محتوى المقال.
-- **author_id**: معرف الكاتب (Foreign Key يشير إلى `Users.user_id`، حيث يكون الكاتب عادةً مدرس أو إداري).
-- **category_id**: معرف الفئة (Foreign Key يشير إلى `Categories.category_id` لفئات المقالات، أو يمكن استخدام جدول فئات منفصل).
+- **author_id**:
+- **category_id**: معرف الفئة 
 - **published_date**: تاريخ النشر.
 - **status**: حالة المقال (منشور، مسودة، ...).
 
